@@ -1,0 +1,47 @@
+<h2 style="color: white">List</h2>
+<table class="table table-striped" style="color: white">
+  <thead style="color: white">
+    <tr>
+      <th>Name</th>
+      <th>Email Id</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Speciality</th>
+      <th>Consultants</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.emailId }}</td>
+      <td>{{ user.from }}</td>
+      <td>{{ user.timing }}</td>
+      <td>{{ user.spec }}</td>
+      <td>{{ user.consul }}</td>
+      <td class="d-flex">
+        <button
+          (click)="updateUser(user.id)"
+          class="btn btn-info"
+          style="margin-left: 8px"
+        >
+          Update
+        </button>
+        <button
+          (click)="deleteUser(user.id)"
+          class="btn btn-danger"
+          style="margin-left: 8px"
+        >
+          Delete
+        </button>
+        <button
+          (click)="userDetails(user.id)"
+          class="btn btn-success"
+          style="margin-left: 8px"
+        >
+          View
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

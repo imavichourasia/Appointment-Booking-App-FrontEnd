@@ -1,0 +1,10 @@
+#sect1 {
+  height: 114vh;
+  width: 1000vw;
+  background-image: url("../../src/assets/images/img.jpg");
+  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #033586;
+}

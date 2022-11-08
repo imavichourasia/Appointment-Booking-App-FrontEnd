@@ -1,0 +1,192 @@
+<div class="col-md-6 offset-md-3" style="background-color: rgb(8, 125, 221)">
+  <br />
+  <h4
+    style="
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    "
+  >
+    New Registration
+  </h4>
+  <br />
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label style="font-family: Georgia; font-weight: bold">Name</label>
+      <input
+        type="text"
+        required
+        class="form-control"
+        id="firstName"
+        [(ngModel)]="user.firstName"
+        name="firstName"
+        placeholder="Enter Your Name"
+        style="font-family: 'Times New Roman', Times, serif"
+        #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+      />
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched"
+        >Please Enter your Name</small
+      >
+    </div>
+
+    <div class="form-group">
+      <label style="font-family: Georgia; font-weight: bold"> Email Id</label>
+      <input
+        type="text"
+        required
+        class="form-control"
+        id="emailId"
+        style="font-family: 'Times New Roman', Times, serif"
+        [(ngModel)]="user.emailId"
+        name="emailId"
+        placeholder="Enter Your E-mail"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <small class="text-danger" [class.d-none]="email.valid || email.untouched"
+        >Email is mandatory</small
+      >
+    </div>
+
+    <div class="form-group">
+      <label style="font-family: Georgia; font-weight: bold"> Date </label>
+      <input
+        type="date"
+        min="2022-09-07"
+        required
+        class="form-control"
+        id="from"
+        style="font-family: 'Times New Roman', Times, serif"
+        [(ngModel)]="user.from"
+        name="from"
+        #date="ngModel"
+        [class.is-invalid]="date.invalid && date.touched"
+      />
+      <small class="text-danger" [class.d-none]="date.valid || date.untouched"
+        >Choose a Date!</small
+      >
+    </div>
+
+    <div class="form-group">
+      <label style="font-family: Georgia; font-weight: bold"> Time </label
+      ><br />
+      <input
+        type="radio"
+        [(ngModel)]="user.timing"
+        value="Morning"
+        name="timing"
+      />
+      Morning
+      <input
+        type="radio"
+        [(ngModel)]="user.timing"
+        value="Evening"
+        name="timing"
+      />
+      Evening
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label style="font-family: Georgia; font-weight: bold"> Speciality</label
+      ><br />
+      <input
+        type="radio"
+        [(ngModel)]="user.spec"
+        value="Cardiologist"
+        name="spec"
+      />Cardiologist<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.spec"
+        value="Neurologist"
+        name="spec"
+      />Neurologist<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.spec"
+        value="Surgeon"
+        name="spec"
+      />Surgeon<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.spec"
+        value="Surgeon"
+        name="spec"
+      />General Physician<br />
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label style="font-family: Georgia; font-weight: bold"> Consultants</label
+      ><br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. G.K. Reddy"
+        name="consul"
+      />
+      Dr. G.K. Reddy (Cardiologist) <br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. V.M. Rao"
+        name="consul"
+      />
+      Dr. V.M. Rao (Cardiologist)<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. F. Benjimin"
+        name="consul"
+      />
+      Dr. F. Benjimin (Neurologist)<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. Mohammed Hussain"
+        name="consul"
+      />
+      Dr. Mohammed Hussain (Neurologist)<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. P. Johnson"
+        name="consul"
+      />
+      Dr. P. Johnson (Surgeon)<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. M.S. Thamizhkumaran"
+        name="consul"
+      />
+      Dr. M.S. Thamizhkumaran (Surgeon)<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value="Dr. S. K. Thapa"
+        name="consul"
+      />
+      Dr. S. K. Thapa (General Physician)<br />
+      <input
+        type="radio"
+        [(ngModel)]="user.consul"
+        value=" Dr. P. Maitra"
+        name="consul"
+      />
+      Dr. P. Maitra (General Physician)<br />
+    </div>
+    <br />
+
+    <button
+      [disabled]="name.invalid || email.invalid || date.invalid"
+      class="btn btn-success"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+  <br />
+</div>

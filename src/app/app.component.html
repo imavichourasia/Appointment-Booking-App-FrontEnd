@@ -1,0 +1,30 @@
+<div id="sect1" class="container">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="users" routerLinkActive="active" class="nav-link"
+          >Appointments List</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="create-user" routerLinkActive="active" class="nav-link"
+          >New Appointment</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <h1 class="text-center" style="color: white">{{ title }}</h1>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <span>
+        For any query or further details Contact: +916789101112, 011-82828282
+        Apollo Hospital, New Delhi Emergency: 1066 Apollo Lifeline:
+        1860-500-1066
+      </span>
+    </div>
+  </footer>
+</div>
